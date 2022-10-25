@@ -1,14 +1,13 @@
 
 import './App.css';
 import Header from './components/Header';
+import ItemListContainer from './components/ItemListContainer';
 
 const App = () => {
   return(
     <>
     <Header/>
-    <h1>Bienvenido!!</h1>
-    <hr></hr>
- 
+ <ItemListContainer/>
     </>
   );
 }
