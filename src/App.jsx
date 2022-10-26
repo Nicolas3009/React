@@ -1,13 +1,13 @@
 
 import './App.css';
 import Header from './components/Header';
-import ItemListContainer from './components/ItemListContainer';
+import Main from './components/Main';
 
 const App = () => {
   return(
     <>
     <Header/>
- <ItemListContainer/>
+    <Main/>
     </>
   );
 }

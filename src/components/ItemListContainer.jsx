@@ -1,94 +1,31 @@
-import Card from "./Card";
+import { useState } from "react";
 
-const ItemListContainer = () => {
+
+const ItemListContainer = (props) => {
+    const [contador, setContador] = useState(0);
+
+    const sumaCarrito = () => {
+       setContador(contador+1)
+    }
+    const restaCarrito = () => {
+        setContador(contador-1)
+     }
+     
     return (
-        <main className="main">
-            <section className="hero">
-                <h1>Bienvenido a mi e-commerce!!</h1>
-                <hr></hr>
-            </section>
-            <section className="catalogo">
-                <Card/>
-                <div>
-                    <div>
-                        <img src="../imagenes/set 2 espejos y reloj mandala.jpg" alt="" />
-                    </div>
-                    <h2> PORTA TABLITA ASADO X1 CALADO RECTANG</h2>
-                    <p>DETALLES DEL PRODUCTO:
-                        Material de alta calidad, muy fácil de limpiar y una
-                        excelente terminación.
-                        Para 1 persona.</p>
-                        <p>$2500</p>
-                        <button  class=" btn btn-primary ">
-                                        Agregar al carrito</button>
-                </div>
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <h2> PORTA TABLITA ASADO X1 CALADO RECTANG</h2>
-                    <p>DETALLES DEL PRODUCTO:
-                        Material de alta calidad, muy fácil de limpiar y una
-                        excelente terminación.
-                        Para 1 persona.</p>
-                        <p>$2500</p>
-                        <button  class=" btn btn-primary ">
-                                        Agregar al carrito</button>
-                </div>
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <h2> PORTA TABLITA ASADO X1 CALADO RECTANG</h2>
-                    <p>DETALLES DEL PRODUCTO:
-                        Material de alta calidad, muy fácil de limpiar y una
-                        excelente terminación.
-                        Para 1 persona.</p>
-                        <p>$2500</p>
-                        <button  class=" btn btn-primary ">
-                                        Agregar al carrito</button>
-                </div>
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <h2> PORTA TABLITA ASADO X1 CALADO RECTANG</h2>
-                    <p>DETALLES DEL PRODUCTO:
-                        Material de alta calidad, muy fácil de limpiar y una
-                        excelente terminación.
-                        Para 1 persona.</p>
-                        <p>$2500</p>
-                        <button  class=" btn btn-primary ">
-                                        Agregar al carrito</button>
-                </div>
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <h2> PORTA TABLITA ASADO X1 CALADO RECTANG</h2>
-                    <p>DETALLES DEL PRODUCTO:
-                        Material de alta calidad, muy fácil de limpiar y una
-                        excelente terminación.
-                        Para 1 persona.</p>
-                        <p>$2500</p>
-                        <button  class=" btn btn-primary ">
-                                        Agregar al carrito</button>
-                </div>
-                <div>
-                    <div>
-                        <img src="" alt="" />
-                    </div>
-                    <h2> PORTA TABLITA ASADO X1 CALADO RECTANG</h2>
-                    <p>DETALLES DEL PRODUCTO:
-                        Material de alta calidad, muy fácil de limpiar y una
-                        excelente terminación.
-                        Para 1 persona.</p>
-                        <p>$2500</p>
-                        <button  class=" btn btn-primary ">
-                                        Agregar al carrito</button>
-                </div>
-            </section>
-        </main>
+        <div className="contenedorProductos">
+          <div className="imagen">
+          <img src={props.imagen} alt="Same alt value" />
+          </div>
+          <div className="descripcionProducto">
+          <h3>{props.titulo}</h3>
+          <p>Descripción: {props.descripcion}</p>
+          <span>$ {props.precio}</span>
+          <button onClick={sumaCarrito}>Sumar al carrito</button> 
+          <p>{contador} productos en el carrito de compras.</p>
+          <button onClick={restaCarrito}>Restar al carrito</button>
+         
+          </div>
+      </div>
 
     );
 }
