@@ -1,6 +1,6 @@
 import ItemListContainer from "./ItemListContainer";
-import { data } from "../utilidades/data"
-import {obtengoData} from "../utilidades/obtengoData"
+import { data } from "../utilidades/data";
+import {obtengoData} from "../utilidades/obtengoData";
 import { useEffect, useState } from "react";
 
 const Main = () => {

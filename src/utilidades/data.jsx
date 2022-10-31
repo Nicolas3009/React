@@ -21,3 +21,22 @@ export const data = [
         precio:"1500",
     },
 ]
+
+export const navBarOptions = [
+    { 
+        category:'Inicio',
+        id:'Inicio'
+},
+{ 
+    category:'Asador',
+     id:'Asador',
+},
+{ 
+    category:'Cocina',
+     id:'Cocina',
+    },
+{ 
+    category:'Decoración',
+    id:'Decoración',
+},
+];
