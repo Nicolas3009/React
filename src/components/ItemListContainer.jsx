@@ -19,6 +19,7 @@ const ItemListContainer = (props) => {
           <div className="descripcionProducto">
           <h3>{props.titulo}</h3>
           <p>Descripción: {props.descripcion}</p>
+          <p>Stock: {props.stock}</p>
           <span>$ {props.precio}</span>
           <button onClick={sumaCarrito}>Sumar al carrito</button> 
           <p>{contador} productos en el carrito de compras.</p>

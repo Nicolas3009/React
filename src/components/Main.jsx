@@ -31,7 +31,8 @@ useEffect(()=> {
                         titulo={item.titulo}
                         imagen={item.imagen}
                         descripcion={item.descripcion}
-                        precio={item.precio} />  
+                        precio={item.precio}
+                        stock= {item.stock} />  
                     ))
                 }
                
