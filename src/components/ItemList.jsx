@@ -1,11 +1,11 @@
 import Item from "./Item";
-import ItemListContainer from "./ItemListContainer";
 
-const ItemList = () => {
+
+const ItemList = ({items}) => {
     return(
         
-        Item.map(item => (
-            <ItemListContainer
+        items.map(item => (
+            <Item
             key={item.id}
             titulo={item.titulo}
             imagen={item.imagen}
