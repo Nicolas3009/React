@@ -1,13 +1,14 @@
 
 import './App.css';
 import Header from './components/Header';
-import Main from './components/Main';
-
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 const App = () => {
   return(
     <>
     <Header/>
-    <Main/>
+    <ItemListContainer/> 
+    {/*<ItemDetailContainer/>*/}
     </>
   );
 }

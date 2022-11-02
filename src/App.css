@@ -133,9 +133,13 @@
   background-color: white;
   border-radius: 15px;
 }
-
-.image {
-  margin: 0 0 0 10px;
+.imagen{
+  height: 50%;
+  width: 100%;
+}
+.imagen img{
+ height: 100%;
+ width: 100%;
 }
 
 .descripcionProducto {

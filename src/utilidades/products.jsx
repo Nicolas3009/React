@@ -1,8 +1,8 @@
-export const data = [
+export const products = [
     {
         id: "1",
         titulo: "PORTA TABLITA ASADO X1 CALADO RECTANG",
-        imagen: "../imagenes/sol.jpeg",
+        imagen: "https://estiloaustral.com/wp-content/uploads/2022/09/JPICNIC009-JUEGO-DE-PICNIC-CABO-MADERA-Y-ALPCA-1.jpg",
         descripcion: "DETALLES DEL PRODUCTO: Material de alta calidad, muy fácil de limpiar y una excelente terminación. Para 1 persona.",
         precio: "2500",
         stock: 17,

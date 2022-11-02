@@ -1,33 +1,35 @@
-import { useState } from "react";
+
+import ItemList from "./ItemList";
+import { products } from "../utilidades/products";
+import {obtengoData} from "../utilidades/obtengoData";
+import { useEffect, useState } from "react";
 
 
-const ItemListContainer = (props) => {
-    const [contador, setContador] = useState(0);
+const ItemListContainer = () => {
 
-    const sumaCarrito = () => {
-       setContador(contador+1)
-    }
-    const restaCarrito = () => {
-        setContador(contador-1)
-     }
-     
+    const [datos, setDatos] = useState([]);
+
+    //componentDidMount
+useEffect(()=> {
+    obtengoData(2000, products)
+    .then(response => setDatos(response))
+    .catch()
+
+}, [])
+
+
+
     return (
-        <div className="contenedorProductos">
-          <div className="imagen">
-          <img src={props.imagen} alt="Same alt value" />
-          </div>
-          <div className="descripcionProducto">
-          <h3>{props.titulo}</h3>
-          <p>Descripción: {props.descripcion}</p>
-          <p>Stock: {props.stock}</p>
-          <span>$ {props.precio}</span>
-          <button onClick={sumaCarrito}>Sumar al carrito</button> 
-          <p>{contador} productos en el carrito de compras.</p>
-          <button onClick={restaCarrito}>Restar al carrito</button>
-         
-          </div>
-      </div>
-
+        <main className="main">
+            <section className="hero">
+                <h1>Bienvenidos a mi e-commer</h1>
+            </section>
+            <section className="catalogo" >
+  
+                    <ItemList items={datos} />
+        
+            </section>
+        </main>
     );
 }
 export default ItemListContainer;
