@@ -1,6 +1,6 @@
 
+import { navBarOptions} from "../utilidades/navBarOptions";
 
-import { navBarOptions} from "../utilidades/products";
 function NavBar() {
   return (
     <>

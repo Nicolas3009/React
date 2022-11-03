@@ -9,9 +9,9 @@ const ItemList = ({items}) => {
             key={item.id}
             titulo={item.titulo}
             imagen={item.imagen}
-            descripcion={item.descripcion}
             precio={item.precio}
-            stock= {item.stock} />  
+            stock={item.stock}
+         />  
         ))
     )
 }

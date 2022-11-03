@@ -22,7 +22,8 @@ useEffect(()=> {
     return (
         <main className="main">
             <section className="hero">
-                <h1>Bienvenidos a mi e-commer</h1>
+                <h1>Bienvenidos a La Isla</h1>
+                <p>La mejor calidad acompañada de los mejores precios</p>
             </section>
             <section className="catalogo" >
   

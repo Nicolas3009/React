@@ -9,7 +9,7 @@ const ItemDetailContainer = () => {
 
     //componentDidMount
 useEffect(()=> {
-    obtengoData(2000, products[1])
+    obtengoData(2000, products[0])
     .then(response => setDato(response))
     .catch()
 
