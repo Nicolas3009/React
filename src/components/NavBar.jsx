@@ -1,14 +1,18 @@
 
 import { navBarOptions} from "../utilidades/navBarOptions";
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
     <>
     <nav>
-    <ul class="navbar-nav">
-        {navBarOptions.map(navBarOption => <li key={navBarOption.id} className="nav-item">
-          <a class=" m-4 active">{navBarOption.category}</a>
-        </li>)}
+    <ul>
+      <li>
+        
+        <a><Link to='/category/1'>Asador</Link></a>
+        <a><Link to='/category/2'>Cocina</Link></a>
+        <a><Link to='/category/3'>Decoración</Link></a>
+        </li>
       </ul>
     </nav>
     </>

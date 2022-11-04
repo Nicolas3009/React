@@ -9,6 +9,12 @@ export const products = [
         elementos: "ELEMENTOS (18 PIEZAS):  1 Bolso de ecocuero. 4 Platos de madera cuadrados de madera de Leuka. 4 Cuchillos t/Tramontina con mango de madera. 4 Tenedores t/Tramontina con mango de madera. 4 Vasos de acero. 1 Repasador de algodón.",
         precio: "2500",
         stock: "17",
+        categotyId: 1,
+        category:{
+            name: "Asador",
+            id: 1,
+
+        }
     },
     {
         id: "2",
@@ -17,6 +23,12 @@ export const products = [
         descripcion: "DETALLES DEL PRODUCTO: Material de alta calidad, muy fácil de limpiar y unaexcelente terminación. Para 4 personas.",
         precio: "4000",
         stock: "15",
+        categotyId: 1,
+        category:{
+            name: "Asador",
+            id: 1,
+
+        }
     },
     {
         id: "3",
@@ -25,6 +37,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Hechos de Metal. Mangos madera ergonómicos y sólidos para un agarre máximo.",
         precio:"3000",
         stock: "20",
+        categotyId: 1,
+        category:{
+            name: "Asador",
+            id: 1,
+
+        }
     },
     {
         id: "4",
@@ -33,6 +51,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Hecho artesanalmente. Diseño original con piezas curvas y rectas. Mangos madera ergonómicos y sólido para un agarre máximo.", 
         precio:"4500",
         stock: "20",
+        categotyId: 1,
+        category:{
+            name: "Asador",
+            id: 1,
+
+        }
     },
     {
         id: "5",
@@ -41,6 +65,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Tabla con funda porta cuchilla en ecocuero. Lineas con grabado láser. Canaleta para goteo. Material de alta calidad, muy fácil de limpiar y una excelente terminación.",
         precio:"3000",
         stock: "20",
+        categotyId: 1,
+        category:{
+            name: "Asador",
+            id: 1,
+
+        }
     },
     {
         id: "6",
@@ -49,6 +79,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Juguera de jugo con dispenser de 6 litros. Base juguera de chapa galvanizada. Vasos de jugo de 345ml. Apto para 6 personas, adaptable para mayor cantidad. Podes usarlo en el exterior, para decorar mesas al aire libre, etc. Bandeja multiuso ",
         precio:"4800",
         stock: "20",
+        categotyId: 2,
+        category:{
+            name: "Cocina",
+            id: 2,
+
+        }
     },
     {
         id: "7",
@@ -57,6 +93,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Jamonera para pata de jamón mediana. Impermeabilizada con aceite vegetal.",
         precio:"3200",
         stock: "20",
+        categotyId: 2,
+        category:{
+            name: "Cocina",
+            id: 2,
+
+        }
     },
     {
         id: "8",
@@ -64,7 +106,13 @@ export const products = [
         imagen:"https://www.belloexport.com.ar/wp-content/uploads/2018/07/TG3579-1.jpg",
         descripcion:"DETALLES DEL PRODUCTO: Es un complemento ideal para uso doméstico y/o profesional en la cocina. Madera ecológica, semidura y de escasa absorción, por el tratamiento que tiene es muy resistente al uso frecuente. Uso familiar o social. Moderno diseño con grabado láser. Excelente detalles terminación.",
         precio:"2900",
-        stock: 20
+        stock: "20",
+        categotyId: 2,
+        category:{
+            name: "Cocina",
+            id: 2,
+
+        }
     },
     {
         id: "9",
@@ -73,6 +121,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Tamaño 30cm. Hecho de fibroplus calado.",
         precio:"2200",
         stock: "13",
+        categotyId: 3,
+        category:{
+            name: "Decoración",
+            id: 3,
+
+        }
     },
     {
         id: "10",
@@ -81,6 +135,12 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Excelente detalles terminación. Uso decorativo. Posee sistema de colgado.",
         precio:"2600",
         stock: "13",
+        categotyId: 3,
+        category:{
+            name: "Decoración",
+            id: 3,
+
+        }
     },
 ]
 
