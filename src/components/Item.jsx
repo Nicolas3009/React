@@ -1,15 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Item = ({imagen, titulo, descripcion, stock, precio}) => {
-
-   const [contador, setContador] = useState(0);
-
-    const sumaCarrito = () => {
-       setContador(contador+1)
-    }
-    const restaCarrito = () => {
-        setContador(contador-1)
-     }
+const Item = ({imagen, titulo, id, stock, precio}) => {
      
     return (
         <div className="contenedorProductos">
@@ -21,7 +13,7 @@ const Item = ({imagen, titulo, descripcion, stock, precio}) => {
           
           <p> Stock: {stock}</p>
           <span>$ {precio}</span>
-          <button>Mas información </button>
+          <button><Link to={`/item/${id}`}>Ver detalle</Link> </button>
           </div>
       </div>
 

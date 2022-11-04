@@ -14,7 +14,7 @@ const ItemListContainer = () => {
 
     //componentDidMount
 useEffect(()=> {
-    if (idCategoty === 'undefined'){
+    if (idCategoty == undefined){
         obtengoData(2000, products)
         .then(response => setDatos(response))
         .catch()
