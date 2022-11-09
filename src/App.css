@@ -208,11 +208,24 @@ flex-direction: column;
   display: flex;
   flex-direction: row;
 }
-.descripcion button{
+.descripcion div button{
   margin: 10px;
   background-color: rgb(1, 43, 46);
   color: white;
   width: 40px;
   height: 30px;
   border-radius: 8px;
+}
+.descripcion div div button{
+  width: 150px;
+  height: 30px;
+}
+.descripcion button{
+  margin-bottom: 20px;
+  background-color: rgb(1, 43, 46);
+  color: white;
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  text-decoration: none;
 }

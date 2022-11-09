@@ -1,14 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const ItemDetail = ({ item }) => {
 
   const [contador, setContador] = useState(0);
 
   const sumaCarrito = () => {
-    setContador(contador + 1)
+    if (contador < item.stock) {
+      setContador(contador + 1);
+    }
   }
   const restaCarrito = () => {
-    setContador(contador - 1)
+    if (contador > 0) {
+      setContador(contador - 1);
+    }
+  }
+
+
+  const agregarAlCarrito = () => {
+    alert("Usted a seleccionado " + " " + contador + " " + "productos");
+
   }
 
   return (
@@ -18,18 +29,35 @@ const ItemDetail = ({ item }) => {
       </div>
       <div className="descripcion">
         <h3>{item.titulo}</h3>
-       <p>{item.descripcion}</p>
-       <p>{item.materiales}</p>
-       <p>{item.medidas}</p>
-       <p>{item.elementos}</p>
+        <p>{item.descripcion}</p>
+        <p>{item.materiales}</p>
+        <p>{item.medidas}</p>
+        <p>{item.elementos}</p>
         <p>Stock: {item.stock}</p>
         <span>$ {item.precio}</span>
-        <div>
-          <button onClick={sumaCarrito}>+</button>
-          <p>{contador} </p>
-          <button onClick={restaCarrito}>-</button>
-        </div>
+        {
 
+          contador === 0
+            ? <>
+              <div>
+                <button onClick={sumaCarrito}>+</button>
+                <p>{contador} </p>
+                <button onClick={restaCarrito}>-</button>
+              </div>
+            </>
+            : <div>
+              <button onClick={sumaCarrito}>+</button>
+              <p>{contador} </p>
+              <button onClick={restaCarrito}>-</button>
+              <div>
+                <button onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
+              </div>
+            </div>
+
+
+        }
+
+        <button><Link to='/cart'>revisar carrito</Link></button>
 
       </div>
     </div>
@@ -37,3 +65,4 @@ const ItemDetail = ({ item }) => {
   );
 }
 export default ItemDetail;
+

@@ -35,9 +35,7 @@ useEffect(()=> {
                 <p>La mejor calidad acompañada de los mejores precios</p>
             </section>
             <section className="catalogo" >
-  
                     <ItemList items={datos} />
-        
             </section>
         </main>
     );
