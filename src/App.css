@@ -222,6 +222,7 @@ flex-direction: column;
 }
 .descripcion button{
   margin-bottom: 20px;
+  margin-top: 20px;
   background-color: rgb(1, 43, 46);
   color: white;
   width: 150px;

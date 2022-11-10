@@ -8,9 +8,8 @@ const ItemDetail = ({ item }) => {
   const [cantidad, setCantidad] = useState()
 
   const agregarAlCarrito = (contador) => {
-    console.log("Usted a seleccionado " + " " + contador + " " + "productos"); 
+    alert("Usted a seleccionado " + " " + contador + " " + "productos"); 
       setCantidad(contador);
-
       }
 
   return (
@@ -29,7 +28,7 @@ const ItemDetail = ({ item }) => {
         
         {
         cantidad > 0
-        ? <Link to={'/cart'}> Ir al carrito</Link> 
+        ? <button><Link to={'/cart'}> Ir al carrito</Link></button>
         : <ItemCount agregarAlCarrito={agregarAlCarrito} stock={item.stock}/>
         
       }
