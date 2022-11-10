@@ -24,7 +24,7 @@ const [contador, setContador] = useState(0);
                <p>{contador} </p>
                <button onClick={restaCarrito}>-</button>
                <div>
-                 <button onClick={() => agregarAlCarrito()}>Agregar al carrito</button>
+                 <button onClick={() => agregarAlCarrito(contador)}>Agregar al carrito</button>
                </div>
              </div>
              <button><Link to='/cart'>revisar carrito</Link></button>

@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Navigate } from "react-router-dom"; 
 import ItemCount from './ItemCount';
 
-const ItemDetail = ({ item, contador }) => {
 
-  const agregarAlCarrito = () => {
-      alert("Usted a seleccionado " + " " + contador + " " + "productos");  
-      <Navigate  to='/cart'/>
+const ItemDetail = ({ item }) => {
+
+  const [cantidad, setCantidad] = useState()
+
+  const agregarAlCarrito = (contador) => {
+    console.log("Usted a seleccionado " + " " + contador + " " + "productos"); 
+      setCantidad(contador);
+
       }
-  
 
   return (
     <div className="contenedorDetalleProducto">
@@ -24,7 +26,13 @@ const ItemDetail = ({ item, contador }) => {
         <p>{item.elementos}</p>
         <p>Stock: {item.stock}</p>
         <span>$ {item.precio}</span>
-        <ItemCount  agregarAlCarrito={agregarAlCarrito} />
+        
+        {
+        cantidad > 0
+        ? <Link to={'/cart'}> Ir al carrito</Link> 
+        : <ItemCount agregarAlCarrito={agregarAlCarrito} stock={item.stock}/>
+        
+      }
       </div>
     </div>
 
