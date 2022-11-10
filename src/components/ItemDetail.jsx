@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom"; 
 
 const ItemDetail = ({ item }) => {
 
@@ -18,9 +19,10 @@ const ItemDetail = ({ item }) => {
 
 
   const agregarAlCarrito = () => {
-    alert("Usted a seleccionado " + " " + contador + " " + "productos");
-
-  }
+      alert("Usted a seleccionado " + " " + contador + " " + "productos");  
+      <Navigate  to='/Cart'/>
+      }
+  
 
   return (
     <div className="contenedorDetalleProducto">
@@ -57,12 +59,12 @@ const ItemDetail = ({ item }) => {
 
         }
 
-        <button><Link to='/cart'>revisar carrito</Link></button>
+        <button><Link to='/Cart'>revisar carrito</Link></button>
 
       </div>
     </div>
 
   );
-}
+      }
 export default ItemDetail;
 
