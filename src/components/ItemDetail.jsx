@@ -20,7 +20,7 @@ const ItemDetail = ({ item }) => {
 
   const agregarAlCarrito = () => {
       alert("Usted a seleccionado " + " " + contador + " " + "productos");  
-      <Navigate  to='/Cart'/>
+      <Navigate  to='/cart'/>
       }
   
 
@@ -59,7 +59,7 @@ const ItemDetail = ({ item }) => {
 
         }
 
-        <button><Link to='/Cart'>revisar carrito</Link></button>
+        <button><Link to='/cart'>revisar carrito</Link></button>
 
       </div>
     </div>
