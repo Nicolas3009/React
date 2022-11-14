@@ -1,5 +1,4 @@
 
-import { navBarOptions} from "../utilidades/navBarOptions";
 import { Link } from 'react-router-dom';
 
 function NavBar() {

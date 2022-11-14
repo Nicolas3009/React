@@ -9,7 +9,7 @@ const Header = () => {
                 <div>
                     <p> <Link to='/' style={{'textDecoration': 'none', 'color': 'white',}}> La Isla</Link> </p>
                     <div>
-                    <AiOutlineShoppingCart/>
+                    <Link to='/cart'><AiOutlineShoppingCart/></Link> 
                    <span>3</span>
                     </div>
                     <NavBar />
