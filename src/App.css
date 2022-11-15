@@ -230,3 +230,55 @@ flex-direction: column;
   border-radius: 8px;
   text-decoration: none;
 }
+
+/*.......carrito .............*/
+
+.h1Carrito{
+  width: 100%;
+  height: 130px;
+  background-color: rgb(6, 125, 134) ;
+ text-align: center;
+ color: white;
+}
+
+.tuCarritoVacio{
+width: 100%;
+height: 100%;
+margin-top: 20px;
+display: flex;
+justify-content: space-around;
+}
+.tuCarritoVacio p{
+margin: 50px;
+font-size: 20px;
+}
+
+.vaciarCarrito{
+ width: 100%;
+ text-align: center;
+}
+.vaciarCarrito button{
+  width: 20%;
+  height: 35px;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.712);
+}
+
+.vaciarCarritoNulo{
+  width: 100%;
+  text-align: center;
+}
+.vaciarCarritoNulo button{
+  width: 20%;
+  height: 35px;
+  color: white;
+  background-color: rgba(173, 166, 166, 0.726);
+}
+.items{
+ 
+ margin: 10px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+}
