@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ItemCount = ({  agregarAlCarrito, stock }) => {
+const ItemCount = ({  agregarAlCarrito, stock, }) => {
 
 const [contador, setContador] = useState(0);
 

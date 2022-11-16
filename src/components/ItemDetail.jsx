@@ -12,7 +12,7 @@ const ItemDetail = ({ item }) => {
   const agregarAlCarrito = (contador) => {
     alert("Usted a seleccionado " + " " + contador + " " + "productos"); 
       setCantidad(contador);
-      addToCart(item);
+      addToCart(item, contador);
       }
 
   return (
