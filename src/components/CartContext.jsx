@@ -29,7 +29,7 @@ setCartList(nuevoArray)
    }
 
     return (
-        <CartContext.Provider value={{cartList, addToCart, borrarCarrito, borrarItemDelCarrito}}>
+        <CartContext.Provider value={{cartList, addToCart, borrarCarrito, borrarItemDelCarrito,}}>
             {props.children}
         </CartContext.Provider>
     )
