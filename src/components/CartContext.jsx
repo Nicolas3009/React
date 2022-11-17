@@ -7,6 +7,8 @@ const CartContextProvider = (props) => {
     const [cartList, setCartList] = useState([])
    
    const addToCart = (item, contador) =>{
+    let sumarItem = cartList.find(product => product.id === item.id);
+    if (sumarItem === undefined) {
 setCartList([
     ...cartList,
     {
@@ -18,6 +20,9 @@ setCartList([
     }
    
 ]);
+} else {
+    sumarItem.contador += contador;
+}
    }
 
    const borrarCarrito = () => {
@@ -31,17 +36,11 @@ setCartList(nuevoArray)
 
 
 
-   const calcularPrecioTotal = (item) => {
+   const calcularPrecioXItem = (item) => {
     let index = cartList.map(item => item.id).indexOf(item.id);
-    return cartList[index].item.precio * cartList[index].item.contador;
+    return cartList[index].item.precio * cartList[index].contador;
 }
 
-
-
-   const sumarItems = () => {
-    let cantidadItem = cartList.map(item => item.contador);
-    return  cantidadItem.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
-}
 
 
     return (
@@ -50,8 +49,7 @@ setCartList(nuevoArray)
             addToCart, 
             borrarCarrito, 
             borrarItemDelCarrito, 
-            sumarItems, 
-            calcularPrecioTotal}}>
+            calcularPrecioXItem}}>
             {props.children}
         </CartContext.Provider>
     )

@@ -3,7 +3,7 @@ import { CartContext } from "./CartContext";
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
-    const { cartList, borrarCarrito, borrarItemDelCarrito, calcularPrecioTotal } = useContext(CartContext)
+    const { cartList, borrarCarrito, borrarItemDelCarrito, calcularPrecioXItem } = useContext(CartContext)
 
     return (
         <>
@@ -26,7 +26,7 @@ const Cart = () => {
                                 <div> <img src={item.imagen} alt="Same alt value" /></div>
                                 <div> {item.titulo}</div>
                                 <div>Cantidad: {item.contador}</div>
-                                <div>$ {item.precio}</div>
+                                <div>$ {() => calcularPrecioXItem(item.id)}</div>
                                 <button onClick={() => borrarItemDelCarrito(item.id)}>X</button>
                             </div>
                             <hr className="hr" />
