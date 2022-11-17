@@ -2,6 +2,7 @@ import NavBar from './NavBar';
 import { AiOutlineShoppingCart } from "react-icons/ai";  
 import { Link } from 'react-router-dom';
 
+
 const Header = () => {
     return (
             <header className="header">
@@ -10,7 +11,7 @@ const Header = () => {
                     <p> <Link to='/' style={{'textDecoration': 'none', 'color': 'white',}}> La Isla</Link> </p>
                     <div>
                     <Link to='/cart'><AiOutlineShoppingCart/></Link> 
-                   <span>3</span>
+                   <span>0</span>
                     </div>
                     <NavBar />
                 </div>

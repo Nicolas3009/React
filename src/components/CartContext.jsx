@@ -1,6 +1,7 @@
 import { createContext, useState } from "react";
 export const CartContext = createContext();
 
+
 const CartContextProvider = (props) => {
 
     
@@ -36,12 +37,22 @@ setCartList(nuevoArray)
 
 
 
-   const calcularPrecioXItem = (item) => {
-    let index = cartList.map(item => item.id).indexOf(item.id);
-    return cartList[index].item.precio * cartList[index].contador;
+   const calcularTotal = () => {
+    // variable inicializada en 0.
+            let total = 0
+    // realizo un forEach y por cada vuelta que sume el total + (precio x cantidad)
+            cartList.forEach(Item => {
+                total = total + Item.precio * Item.contador
+            })
+    // retorne el total.
+            return total
+        }
+
+const comprar = () => {
+    alert('Su total es de: $' + " " + calcularTotal());
+    setCartList([])
+    alert('¡Gracias por su compra!')
 }
-
-
 
     return (
         <CartContext.Provider value={
@@ -49,7 +60,9 @@ setCartList(nuevoArray)
             addToCart, 
             borrarCarrito, 
             borrarItemDelCarrito, 
-            calcularPrecioXItem}}>
+            calcularTotal,
+            comprar,
+            }}>
             {props.children}
         </CartContext.Provider>
     )
