@@ -22,7 +22,14 @@ setCartList([
    
 ]);
 } else {
-    sumarItem.contador += contador;
+    const cartListAux = cartList.map( p => {
+        if(p.id ===  item.id){
+        const newProd = p. contador + contador 
+        return newProd
+        }
+        return p
+        })
+        setCartList(cartListAux)
 }
    }
 
