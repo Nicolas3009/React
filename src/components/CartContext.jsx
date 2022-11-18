@@ -35,7 +35,16 @@ let nuevoArray = cartList.filter(item => item.id != id)
 setCartList(nuevoArray)
    }
 
-
+   const contadorDelCarrito = (item) => {
+    // variable inicializada en 0.
+            let carrito = 0
+    // realizo un forEach y por cada vuelta que sume el total + (precio x cantidad)
+            cartList.forEach(Item => {
+                carrito = carrito + Item.contador
+            })
+    // retorne el total.
+            return carrito;
+        }
 
    const calcularTotal = () => {
     // variable inicializada en 0.
@@ -62,6 +71,7 @@ const comprar = () => {
             borrarItemDelCarrito, 
             calcularTotal,
             comprar,
+            contadorDelCarrito,
             }}>
             {props.children}
         </CartContext.Provider>
