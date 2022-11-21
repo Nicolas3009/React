@@ -24,10 +24,10 @@ setCartList([
 } else {
     const cartListAux = cartList.map( p => {
         if(p.id ===  item.id){
-        const newProd = p. contador + contador 
+        const newProd = {p,contador: p.contador + contador }
         return newProd
         }
-        return p
+        return p, contador
         })
         setCartList(cartListAux)
 }
