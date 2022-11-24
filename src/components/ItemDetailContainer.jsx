@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { db } from "../utilidades/configBD";
+import { collection, doc, getDoc } from "firebase/firestore";
 import ItemDetail from "./ItemDetail";
 import {obtengoData} from "../utilidades/obtengoData";
 import { useParams } from "react-router-dom";
-const {products} = require("../utilidades/products")
+
 
 
 const ItemDetailContainer = () => {
@@ -13,11 +15,18 @@ const ItemDetailContainer = () => {
 
     //componentDidMount
 useEffect(()=>{ 
-    obtengoData(2000, products.find(item => item.id == idItem))
-    .then(response => setDato(response))
-    .catch()
-   
-}, []);
+    const coleccionProd = collection (db, "Products")
+    const referenciaDoc =doc(coleccionProd, idItem)
+    getDoc(referenciaDoc)
+    .then((result=>{
+        setDato({
+            id:result.id,
+            ...result.data()
+        })
+    }))
+    .catch((error)=>console.log(error))
+}, [idItem])
+    
 
 
 
