@@ -1,11 +1,10 @@
 
 import ItemList from "./ItemList";
-import { products } from "../utilidades/products";
 import {obtengoData} from "../utilidades/obtengoData";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
-
+import { db } from "../utilidades/configBD";
+import { collection, getDocs } from "firebase/firestore"; 
 
 const ItemListContainer = () => {
 
@@ -13,16 +12,11 @@ const ItemListContainer = () => {
     const { idCategoty } = useParams();
 
     //componentDidMount
-useEffect(()=> {
-    if (idCategoty == undefined){
-        obtengoData(2000, products)
-        .then(response => setDatos(response))
-        .catch()
-    } else{
-        obtengoData(2000, products.filter(item => item.categotyId == idCategoty))
-        .then(response => setDatos(response))
-        .catch()
-    }
+useEffect(async ()=> {
+    const querySnapshot = await getDocs(collection(db, "products"));
+    querySnapshot.forEach((doc) => {
+      console.log(`${doc.id} => ${doc.data()}`);
+    });
 
 }, [idCategoty]);
 

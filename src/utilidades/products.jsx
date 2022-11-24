@@ -6,14 +6,10 @@ export const products = [
         descripcion: "DETALLES DEL PRODUCTO: Material de alta calidad, muy fácil de limpiar y una excelente terminación. Para 1 persona.",
         materiales: "MATERIALES DEL PRODUCTO: Ecocuero tricapa y madera Leuka compensada.",
         elementos: "ELEMENTOS (5 PIEZAS): Estuche de ecocuero. Plato rectangular de madera de Leuka con canal para goteo. Juego de cubiertos acero inoxidable con mango de madera t./Tramontina. Vaso de acero inoxidable",
-        precio: "2500",
+        precio: 2500,
         stock: "17",
         categotyId: 1,
-        category:{
-            name: "Asador",
-            id: 1,
 
-        }
     },
     {
         id: "2",
@@ -23,14 +19,10 @@ export const products = [
         materiales: "MATERIALES: Ecocuero tricapa y madera leuka compensada.",
         medidas: "MEDIDAS: Estuche:  33cm. X 23cm. X 12cm. Tabla:  23cm. X 23cm, X 1.5cm. ",
         elementos: "ELEMENTOS (18 PIEZAS):  1 Bolso de ecocuero. 4 Platos de madera cuadrados de madera de Leuka. 4 Cuchillos t/Tramontina con mango de madera. 4 Tenedores t/Tramontina con mango de madera. 4 Vasos de acero. 1 Repasador de algodón.",
-        precio: "4000",
+        precio: 4000,
         stock: "15",
         categotyId: 1,
-        category:{
-            name: "Asador",
-            id: 1,
-
-        }
+      
     },
     {
         id: "3",
@@ -38,14 +30,10 @@ export const products = [
         imagen:"https://www.belloexport.com.ar/wp-content/uploads/2021/11/1022_037.jpg",
         descripcion:"DETALLES DEL PRODUCTO: Hechos de Metal. Mangos madera ergonómicos y sólidos para un agarre máximo.",
         elementos: "INCLUYE (4 Piezas) : Palita metal mango de madera. Atizador metal mango de madera. Pinza de metal. Ménsula",
-        precio:"3000",
+        precio: 3000,
         stock: "20",
         categotyId: 1,
-        category:{
-            name: "Asador",
-            id: 1,
-
-        }
+        
     },
     {
         id: "4",
@@ -53,14 +41,10 @@ export const products = [
         imagen:"https://www.belloexport.com.ar/wp-content/uploads/2018/05/20210630_211.jpg",
         descripcion:"DETALLES DEL PRODUCTO: Hecho artesanalmente. Diseño original con piezas curvas y rectas. Mangos madera ergonómicos y sólido para un agarre máximo.", 
         elementos: "INCLUYE: 1 Palita metal mango de madera (90 cm. Largo). 1 Atizador metal mango de madera (70 cm. Largo). 1 Pinza de metal (65 cm. Largo). 1 Cepillo de acero mango metal y madera (70 cm. Largo). 1 Perchero de metal y madera (50 x 22 cm.)",
-        precio:"4500",
+        precio: 4500,
         stock: "20",
         categotyId: 1,
-        category:{
-            name: "Asador",
-            id: 1,
-
-        }
+      
     },
     {
         id: "5",
@@ -70,14 +54,10 @@ export const products = [
         materiales: "MATERIAL: Madera leuka compensada.",
         medidas: "MEDIDAS: 46cm. X 7cm. X 1,8cm.",
         elementos: "ELEMETOS (4 PIEZAS): 1 Tabla de madera. 1 Funda de ecocuero. 1 Cuchilla. 1 Pinche.",
-        precio:"3000",
+        precio: 3000,
         stock: "20",
         categotyId: 1,
-        category:{
-            name: "Asador",
-            id: 1,
-
-        }
+       
     },
     {
         id: "6",
@@ -85,14 +65,10 @@ export const products = [
         imagen:"https://www.belloexport.com.ar/wp-content/uploads/2021/11/1006_076-1.jpg",
         descripcion:"DETALLES DEL PRODUCTO: Juguera de jugo con dispenser de 6 litros. Base juguera de chapa galvanizada. Vasos de jugo de 345ml. Apto para 6 personas, adaptable para mayor cantidad. Podes usarlo en el exterior, para decorar mesas al aire libre, etc. Bandeja multiuso ",
         elementos: "ELEMENTOS (21 PIEZAS): Juguera de vidrio. Pie galvanizado. 6 vasos de vidrio. 6 posavasos de fibroplus. 6 cucharas de metal. Bandeja multiuso de fibroplus",
-        precio:"4800",
+        precio: 4800,
         stock: "20",
         categotyId: 2,
-        category:{
-            name: "Cocina",
-            id: 2,
-
-        }
+       
     },
     {
         id: "7",
@@ -100,14 +76,10 @@ export const products = [
         imagen:"https://www.belloexport.com.ar/wp-content/uploads/2021/11/1028_039-1.jpg",
         descripcion:"DETALLES DEL PRODUCTO: Jamonera para pata de jamón mediana. Impermeabilizada con aceite vegetal.",
         materiales: "MATERIALES: Madera de Leuka.",
-        precio:"3200",
+        precio: 3200,
         stock: "20",
         categotyId: 2,
-        category:{
-            name: "Cocina",
-            id: 2,
-
-        }
+        
     },
     {
         id: "8",
@@ -117,14 +89,10 @@ export const products = [
         materiales: "MATERIAL: Madera leuka compensada.",
         medidas: "MEDIDAS: 50cm. X 10cm. X 1cm. ",
         elementos: "ELEMENTOS (4 PIEZAS): 1 Tabla baguette de madera. 3 cuencos de cerámica esmaltada cuadradas.",
-        precio:"2900",
+        precio: 2900,
         stock: "20",
         categotyId: 2,
-        category:{
-            name: "Cocina",
-            id: 2,
-
-        }
+      
     },
     {
         id: "9",
@@ -132,14 +100,10 @@ export const products = [
         imagen:"https://www.belloexport.com.ar/wp-content/uploads/2022/05/HZ_5665.jpg",
         descripcion:"DETALLES DEL PRODUCTO: Tamaño 30cm. Hecho de fibroplus calado.",
         materiales: "MATERIALES: Fibroplus y espejo.",
-        precio:"2200",
+        precio: 2200,
         stock: "13",
         categotyId: 3,
-        category:{
-            name: "Decoración",
-            id: 3,
-
-        }
+      
     },
     {
         id: "10",
@@ -148,14 +112,10 @@ export const products = [
         descripcion:"DETALLES DEL PRODUCTO: Excelente detalles terminación. Uso decorativo. Posee sistema de colgado.",
         medidas: "MEDIDAS: Diámetro 26cm",
         elementos: "ELEMENTOS (3 PIEZAS): Reloj calado en fibroplus. 2 Espejos en base de calada de Fibroplus.",
-        precio:"2600",
+        precio: 2600,
         stock: "13",
         categotyId: 3,
-        category:{
-            name: "Decoración",
-            id: 3,
-
-        }
+        
     },
 ]
 
