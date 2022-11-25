@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 export const CartContext = createContext();
 
 
+
 const CartContextProvider = (props) => {
 
 
@@ -66,11 +67,7 @@ const CartContextProvider = (props) => {
         return total
     }
 
-    const comprar = () => {
-        alert('Su total es de: $' + " " + calcularTotal());
-        setCartList([])
-        alert('¡Gracias por su compra!')
-    }
+  
 
     return (
         <CartContext.Provider value={
@@ -80,7 +77,6 @@ const CartContextProvider = (props) => {
                 borrarCarrito,
                 borrarItemDelCarrito,
                 calcularTotal,
-                comprar,
                 contadorDelCarrito,
             }}>
             {props.children}
