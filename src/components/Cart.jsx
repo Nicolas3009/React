@@ -1,52 +1,63 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import { Link } from 'react-router-dom';
-import {collection, doc, increment, serverTimestamp, setDoc, updateDoc}  from "firebase/firestore";
-import {db} from '../utilidades/configBD'
+import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
+import { db } from '../utilidades/configBD'
+import { updateForm } from "react";
+import {withReactContent, Swal } from "react";
+
 import { async } from "@firebase/util";
 
 
 const Cart = () => {
-    const { cartList, borrarCarrito, borrarItemDelCarrito, calcularTotal,} = useContext(CartContext)
+    const { cartList, borrarCarrito, borrarItemDelCarrito, calcularTotal, } = useContext(CartContext)
 
-    
+
     const createOrder = () => {
         let order = {
-         comprador: {
-             name: 'Lionel Messi',
-             email: 'Lionelmessi02@gmail.com',
-             phone: '3492301923',
-         },
-         date: serverTimestamp(),
-         items: cartList.map(item => ({
-            id: item.id,
-            title: item.titulo,
-            price: item.precio,
-            qty: item.contador,
-         })),
+            comprador: {
+                name: 'Lionel Messi',
+                email: 'Lionelmessi02@gmail.com',
+                phone: '3492301923',
+            },
+            date: serverTimestamp(),
+            items: cartList.map(item => ({
+                id: item.id,
+                title: item.titulo,
+                price: item.precio,
+                qty: item.contador,
+            })),
 
-         total: calcularTotal(),
+            total: calcularTotal(),
         }
-       
-       const createOrderBD = async() => {
-        const nuevaOrden = doc(collection(db, 'orders'))
-         await setDoc(nuevaOrden, order);
-         return nuevaOrden
+
+        const createOrderBD = async () => {
+            const nuevaOrden = doc(collection(db, 'orders'))
+            await setDoc(nuevaOrden, order);
+            return nuevaOrden
         }
 
         createOrderBD()
-        .then(response => {
-            alert('se creó la orden en la base de datos, con id =', response.id)
-            cartList.forEach(async(item) => {
-                const itemRef = doc(db, 'products', item.id);
-                await updateDoc(itemRef,{
-                    stock: increment(-item.contador)
-            });
+            .then(response => {
+
+                const MySwal = withReactContent(Swal)
+                MySwal.fire({
+                    title: <strong>Gracias por su compra!</strong>,
+                    html: <i>Se creó la orden en la base de datos, con id = {response.id}</i>,
+                    icon: 'success'
+                })
+
+                cartList.forEach(async (item) => {
+                    const itemRef = doc(db, 'products', item.id);
+                    await updateDoc(itemRef, {
+                        stock: increment(-item.contador)
+                    })
+                        .then(() => { updateForm.reset() })
+                })
+                borrarCarrito()
             })
-            borrarCarrito()
-        })
-        .catch(err => console.log(err))
-     }
+            .catch(err => console.log(err))
+    }
 
     return (
         <>
@@ -84,9 +95,9 @@ const Cart = () => {
                     : <div className="vaciarCarrito">
                         <div><p>Total del carrito: $ {calcularTotal()}</p></div>
                         <div>
-                        <button onClick={borrarCarrito}>Vaciar carrito</button>
-                        <button className="comprar" onClick={createOrder }>Comprar</button>
-                        </div>  
+                            <button onClick={borrarCarrito}>Vaciar carrito</button>
+                            <button className="comprar" onClick={createOrder}>Comprar</button>
+                        </div>
                     </div>
             }
 

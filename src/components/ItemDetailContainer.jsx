@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "../utilidades/configBD";
 import { collection, doc, getDoc } from "firebase/firestore";
 import ItemDetail from "./ItemDetail";
-
+import {obtengoData} from "../utilidades/obtengoData";
 import { useParams } from "react-router-dom";
 
 
