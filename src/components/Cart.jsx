@@ -51,7 +51,7 @@ const Cart = () => {
     return (
         <>
             <div className="h1Carrito">
-                <h1>Carrrito</h1>
+                <h1>Carrito</h1>
                 <hr />
             </div>
             <Link to='/' > <button className="volverAComprar">Ir a comprar</button></Link>
