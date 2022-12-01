@@ -13,7 +13,8 @@ const Item = ({imagen, titulo, id, stock, precio}) => {
           
           <p> Stock: {stock}</p>
           <span>$ {precio}</span>
-          <button><Link to={`/item/${id}`}>Ver detalle</Link></button>
+          <Link to={`/item/${id}`}> <button>Ver detalle</button></Link>
+         
           </div>
       </div>
 

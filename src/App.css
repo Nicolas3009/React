@@ -161,18 +161,17 @@
 
 .descripcionProducto button {
 margin: 10px;
+padding: 5px;
 background-color: rgb(1, 43, 46);
+color: white;
+width: 100px;
 border-radius: 8px;
 transition: all 1s;
 }
-.descripcionProducto button Link{
-  color: white;
-  text-decoration: none;
 
-}
 
 .descripcionProducto button:hover {
-  background-color: rgba(1, 43, 46, 0.658);
+  background-color:rgba(1, 43, 46, 0.781);
   
 }
 

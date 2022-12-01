@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 import { collection, doc, increment, serverTimestamp, setDoc, updateDoc } from "firebase/firestore";
 import { db } from '../utilidades/configBD'
 import { updateForm } from "react";
-import {withReactContent, Swal } from "react";
-
-import { async } from "@firebase/util";
-
 
 const Cart = () => {
     const { cartList, borrarCarrito, borrarItemDelCarrito, calcularTotal, } = useContext(CartContext)
@@ -38,15 +34,8 @@ const Cart = () => {
         }
 
         createOrderBD()
-            .then(response => {
-
-                const MySwal = withReactContent(Swal)
-                MySwal.fire({
-                    title: <strong>Gracias por su compra!</strong>,
-                    html: <i>Se creó la orden en la base de datos, con id = {response.id}</i>,
-                    icon: 'success'
-                })
-
+            .then(() => {
+                alert('Se creó la orden en la base de datos. Gracias por su compra!')
                 cartList.forEach(async (item) => {
                     const itemRef = doc(db, 'products', item.id);
                     await updateDoc(itemRef, {
@@ -80,7 +69,7 @@ const Cart = () => {
                                 <div> <img src={item.imagen} alt="Same alt value" /></div>
                                 <div> {item.titulo}</div>
                                 <div>Cantidad: {item.contador}</div>
-                                <div>$ {item.precio * item.contador}</div>
+                                <div>Total: ${item.precio * item.contador}</div>
                                 <button onClick={() => borrarItemDelCarrito(item.id)}>X</button>
                             </div>
                             <hr className="hr" />

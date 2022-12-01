@@ -28,7 +28,7 @@ const ItemListContainer = () => {
     })
 
 }, [idCategoty])
-console.log(datos);
+
 
 
 
