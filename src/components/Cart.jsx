@@ -37,11 +37,11 @@ const Cart = () => {
             .then(() => {
                 alert('Se creó la orden en la base de datos. Gracias por su compra!')
                 cartList.forEach(async (item) => {
-                    const itemRef = doc(db, 'products', item.id);
+                    const itemRef = doc(db, 'Products', item.id);
                     await updateDoc(itemRef, {
                         stock: increment(-item.contador)
                     })
-                        .then(() => { updateForm.reset() })
+                       
                 })
                 borrarCarrito()
             })
